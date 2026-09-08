@@ -1,0 +1,49 @@
+{
+  "model_name": "XGBoost",
+  "features": [
+    "PM2.5",
+    "PM10",
+    "NO2",
+    "SO2",
+    "CO",
+    "O3",
+    "NH3",
+    "month",
+    "season"
+  ],
+  "season_map": {
+    "Winter": 0,
+    "Summer": 1,
+    "Monsoon": 2,
+    "Post-Monsoon": 3
+  },
+  "target": "AQI",
+  "r2": 0.9291,
+  "rmse": 30.11,
+  "mae": 18.66,
+  "category_accuracy": 0.7863,
+  "api_unit_conversion": {
+    "PM2.5": 1.0,
+    "PM10": 1.0,
+    "NO2": 1.0,
+    "SO2": 1.0,
+    "CO": 0.001,
+    "O3": 1.0,
+    "NH3": 1.0
+  },
+  "model_file": "aqi_model.json",
+  "model_format": "xgboost native json (Booster.save_model)",
+  "xgboost_version_exported_with": "3.4.1",
+  "note": "Load with xgboost.Booster().load_model('aqi_model.json'). This format is version-portable; the old .pkl was not.",
+  "feature_names_in_model": [
+    "PM2.5",
+    "PM10",
+    "NO2",
+    "SO2",
+    "CO",
+    "O3",
+    "NH3",
+    "month",
+    "season"
+  ]
+}
