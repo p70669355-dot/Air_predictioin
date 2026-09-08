@@ -1,0 +1,9 @@
+# NEVER commit the API key
+.streamlit/secrets.toml
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.DS_Store
